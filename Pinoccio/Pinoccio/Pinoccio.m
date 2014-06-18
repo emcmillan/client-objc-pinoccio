@@ -9,7 +9,7 @@
 #import "Pinoccio.h"
 
 @implementation Pinoccio
--(void)generateTokenWithEmail:(NSString *)email password:(NSString *)password withCompletion:(void (^)(NSString *, BOOL))block{
+-(void)generateTokenWithEmail:(NSString *)email password:(NSString *)password withCompletion:(void (^)(NSString *, BOOL))block {
     NSString *post = [NSString stringWithFormat:@"{\"email\":\"%@\",\"password\":\"%@\"}",email,password];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
@@ -34,5 +34,23 @@
     }else {
         block(results[@"error"][@"message"], NO); // Oh no! Check user name and password.
     }
+}
+
+-(void)troopWithToken:(NSString *)token withCompletion:(void (^)(NSDictionary *, BOOL))block {
+    NSURL *urlString = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.pinocc.io/v1/troops?token=%@",token]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:urlString];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               NSDictionary *temporaryDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                               if (!error && !temporaryDictionary[@"error"]){
+                                   block(temporaryDictionary, YES);
+                               }else if (temporaryDictionary[@"error"]){
+                                   block(temporaryDictionary, NO);
+                               }else {
+                                   block([error userInfo], NO);
+                               }
+                               
+                           }];
 }
 @end

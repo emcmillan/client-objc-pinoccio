@@ -31,6 +31,17 @@
             NSLog(@"Username and password is incorrect!");
         }
     }];
+    
+    // Troop for token
+    [pinoccioAPI troopWithToken:token withCompletion:^(NSDictionary *troopDictionary, BOOL isOK){
+        if (isOK) {
+            NSLog(@"%@", troopDictionary[@"data"]);
+        }else if (troopDictionary[@"error"]){
+            NSLog(@"Error: %@", troopDictionary[@"error"][@"message"]);
+        }else {
+            NSLog(@"Connection Error: %@", troopDictionary);
+        }
+    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

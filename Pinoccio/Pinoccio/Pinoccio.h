@@ -11,5 +11,5 @@
 @interface Pinoccio : NSObject
 
 -(void)generateTokenWithEmail:(NSString *)email password:(NSString *)password withCompletion:(void (^)(NSString *, BOOL))block;
-
+-(void)troopWithToken:(NSString *)token withCompletion:(void (^)(NSDictionary *, BOOL))block;
 @end
