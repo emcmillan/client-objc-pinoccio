@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8A76C6F6-F3DF-42CB-9342-3CE5D8DA11DA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pinoccio</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3003FADD-7478-47CB-8897-9F3A0EC6043E</key>
+		<string>https://github.com/Pinoccio/client-objc-pinoccio.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pinoccio/Pinoccio.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3003FADD-7478-47CB-8897-9F3A0EC6043E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Pinoccio/client-objc-pinoccio.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3003FADD-7478-47CB-8897-9F3A0EC6043E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3003FADD-7478-47CB-8897-9F3A0EC6043E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>client-objc-pinoccio</string>
+		</dict>
+	</array>
+</dict>
+</plist>

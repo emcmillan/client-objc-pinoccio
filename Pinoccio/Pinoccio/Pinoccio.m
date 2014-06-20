@@ -36,16 +36,16 @@
     }
 }
 
--(void)troopWithToken:(NSString *)token withCompletion:(void (^)(NSDictionary *, BOOL))block {
+-(void)troopWithToken:(NSString *)token withCompletion:(void (^)(id, BOOL))block {
     NSURL *urlString = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.pinocc.io/v1/troops?token=%@",token]];
     NSURLRequest *request = [NSURLRequest requestWithURL:urlString];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               NSDictionary *temporaryDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                               id temporaryDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                if (!error && !temporaryDictionary[@"error"]){
                                    block(temporaryDictionary, YES);
-                               }else if (temporaryDictionary[@"error"]){
+                               }else if (!error && temporaryDictionary[@"error"]){
                                    block(temporaryDictionary, NO);
                                }else {
                                    block([error userInfo], NO);

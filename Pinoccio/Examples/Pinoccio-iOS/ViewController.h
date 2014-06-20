@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Pinoccio.h"
-@interface ViewController : UIViewController
+#import <QuartzCore/QuartzCore.h>
+
+@interface ViewController : UITableViewController
 
 
 @end

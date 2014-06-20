@@ -17,6 +17,7 @@
 		B91955631951FF0F00C92862 /* Pinoccio_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91955621951FF0F00C92862 /* Pinoccio_iOSTests.m */; };
 		B919559A1952088A00C92862 /* libPinoccio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91955281951FED300C92862 /* libPinoccio.a */; };
 		B919559B1952092F00C92862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B919554E1951FF0F00C92862 /* AppDelegate.m */; };
+		B988155F195403BA00319DBA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B988155E195403BA00319DBA /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B919555C1951FF0F00C92862 /* Pinoccio-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pinoccio-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91955611951FF0F00C92862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91955621951FF0F00C92862 /* Pinoccio_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pinoccio_iOSTests.m; sourceTree = "<group>"; };
+		B988155E195403BA00319DBA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B988155F195403BA00319DBA /* QuartzCore.framework in Frameworks */,
 				B919559A1952088A00C92862 /* libPinoccio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +123,7 @@
 		B919551F1951FED300C92862 = {
 			isa = PBXGroup;
 			children = (
+				B988155E195403BA00319DBA /* QuartzCore.framework */,
 				B919552A1951FED300C92862 /* Pinoccio */,
 				B91955421951FEED00C92862 /* Examples */,
 				B91955911951FF3100C92862 /* Test Cases */,
